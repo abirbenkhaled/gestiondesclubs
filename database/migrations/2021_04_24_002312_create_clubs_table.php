@@ -14,7 +14,11 @@ class CreateClubsTable extends Migration
     public function up()
     {
         Schema::create('clubs', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->string('club_name');
+            $table->integer('nbr_adherant');
+            $table->enum('categorie', ['scientifique', 'culturelle', 'artistique']);
+            $table->string('chair_name');
             $table->timestamps();
         });
     }

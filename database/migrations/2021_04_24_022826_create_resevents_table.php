@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEventsTable extends Migration
+class CreateReseventsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
+        Schema::create('resevents', function (Blueprint $table) {
             $table->increments('id');
             $table->string('recepteur');
             $table->string('destinataire');
@@ -22,7 +22,6 @@ class CreateEventsTable extends Migration
             $table->integer('club_id')->unsigned();
             $table->foreign('club_id')->references('id')->on('clubs')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
-
         });
     }
 
@@ -33,6 +32,6 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('events');
+        Schema::dropIfExists('resevents');
     }
 }

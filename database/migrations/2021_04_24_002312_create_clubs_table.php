@@ -20,6 +20,7 @@ class CreateClubsTable extends Migration
             $table->enum('categorie', ['scientifique', 'culturelle', 'artistique']);
             $table->string('chair_name');
             $table->timestamps();
+            
         });
     }
 

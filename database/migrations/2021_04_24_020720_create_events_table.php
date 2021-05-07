@@ -20,8 +20,10 @@ class CreateEventsTable extends Migration
             $table->date('date');
             $table->string('sujet');
             $table->integer('club_id')->unsigned();
-            $table->foreign('club_id')->references('id')->on('clubs')->onDelete('restrict')->onUpdate('restrict');
             $table->timestamps();
+            $table->foreign('club_id')->references('id')->on('clubs')->onDelete('restrict')->onUpdate('restrict');
+            
+            
 
         });
     }

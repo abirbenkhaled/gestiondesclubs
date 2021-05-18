@@ -32,6 +32,6 @@ class HomeController extends Controller
             'events'=>$events,
             'resevents'=>$resevents
 
-        ] );
+        ] ); 
     }
 }

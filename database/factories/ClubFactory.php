@@ -5,11 +5,14 @@
 use App\Club;
 use Faker\Generator as Faker;
 
-$factory->define(Club::class, function (Faker $faker) {
+$factory->define(club::class, function (Faker $faker) {
     return [
+       
         'club_name' => $faker->word,
         'nbr_adherant' => $faker->randomDigit,
-        'categorie' => $faker->randomElement(['scientifique', 'culturelle', 'artistique']),
-        'chair_name' => $faker->word
+        'categorie'=>$faker->randomElement(['scientifique','culturelle','artistique']),
+        'chair_name'=>$faker->word,
     ];
-});
+});  
+
+

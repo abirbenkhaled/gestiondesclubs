@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\clubs
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

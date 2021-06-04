@@ -9,3 +9,5 @@ class Club extends Model
     return $this->belongsTo('App\Club');
 }
 }
+
+

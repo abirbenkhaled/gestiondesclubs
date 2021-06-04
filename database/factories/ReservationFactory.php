@@ -13,3 +13,4 @@ $factory->define(Reservation::class, function (Faker $faker) {
         'club_id'=>Club::get('id')->random(),
     ];
 });
+  

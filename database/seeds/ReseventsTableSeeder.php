@@ -1,5 +1,5 @@
 <?php
-
+use App\Resevent;
 use Illuminate\Database\Seeder;
 
 class ReseventsTableSeeder extends Seeder

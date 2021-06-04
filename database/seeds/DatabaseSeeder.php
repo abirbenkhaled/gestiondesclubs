@@ -2,9 +2,7 @@
 
 
 use Illuminate\Database\Seeder;
-use App\Club;
-use App\Event;
-use App\Resevent;
+
 
   
 class DatabaseSeeder extends Seeder

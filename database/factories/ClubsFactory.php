@@ -5,7 +5,7 @@
 use App\Club;
 use Faker\Generator as Faker;
 
-$factory->define(club::class, function (Faker $faker) {
+$factory->define(Club::class, function (Faker $faker) {
     return [
        
         'club_name' => $faker->word,

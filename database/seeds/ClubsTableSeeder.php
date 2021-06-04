@@ -1,5 +1,5 @@
 <?php
-
+use App\Club;
 use Illuminate\Database\Seeder;
 
 class ClubsTableSeeder extends Seeder
@@ -11,6 +11,6 @@ class ClubsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(Club::class, 10)->create();
     }
 }

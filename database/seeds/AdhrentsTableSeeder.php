@@ -1,5 +1,5 @@
 <?php
-
+use App\Adhrent;
 use Illuminate\Database\Seeder;
 
 class AdhrentsTableSeeder extends Seeder

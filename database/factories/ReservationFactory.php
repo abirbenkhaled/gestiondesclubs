@@ -8,6 +8,7 @@ use App\Club;
 
 
 
+
 $factory->define(Reservation::class, function (Faker $faker) {
     return [
         'workshops_name' => $faker->word,

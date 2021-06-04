@@ -14,7 +14,7 @@ class CreateClubsTable extends Migration
     public function up()
     {
         Schema::create('clubs', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->string('club_name');
             $table->integer('nbr_adherant');
             $table->enum('categorie', ['scientifique', 'culturelle', 'artistique']);

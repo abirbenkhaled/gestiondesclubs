@@ -9,7 +9,8 @@ $factory->define(Club::class, function (Faker $faker) {
     return [
         'club_name' => $faker->word,
         'nbr_adherant' => $faker->randomDigit,
-        'categorie' => $faker->randomElements,
+        'categorie' => $faker->randomElement(['scientifique','culturelle','artistique']),
         'chair_name' => $faker->word
+        
     ];
 });

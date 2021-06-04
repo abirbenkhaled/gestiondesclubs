@@ -4,6 +4,7 @@
 
 use App\Workshop;
 use Faker\Generator as Faker;
+use App\Club;
 
 $factory->define(Workshop::class, function (Faker $faker) {
     return [
@@ -11,5 +12,7 @@ $factory->define(Workshop::class, function (Faker $faker) {
         'nbr_adherant' => $faker->randomDigit,
         'date' => $faker->date($format = 'Y-m-d', $max = 'now'),
         'formateur_name' => $faker->word,
+        'club_id'=>Club::get('id')->random(),
+
     ];
 });

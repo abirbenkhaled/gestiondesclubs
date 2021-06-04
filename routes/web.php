@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@welcome' );
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin-dashboard', function () {
+    return view('admin.dashboard');
+})->middleware('auth', 'admin')->name('admin.dashboard');
+
+Route::resource('customers', 'Admin\CustomerController');

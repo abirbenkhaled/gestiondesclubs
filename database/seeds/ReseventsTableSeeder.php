@@ -12,5 +12,6 @@ class ReseventsTableSeeder extends Seeder
     public function run()
     {
         factory(Resevent::class, 10)->create();
+        
     }
 }

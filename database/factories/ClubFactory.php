@@ -12,6 +12,7 @@ $factory->define(club::class, function (Faker $faker) {
         'nbr_adherant' => $faker->randomDigit,
         'categorie'=>$faker->randomElement(['scientifique','culturelle','artistique']),
         'chair_name'=>$faker->word,
+        'picture' => $faker->imageUrl,
     ];
 });  
 

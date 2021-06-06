@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\clubs
+use App\Club;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,25 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
-<<<<<<< HEAD
-    public function welcome(){
-        $events= event::get('id');
-        $resevents= resevent::get('id')
-        return view('welcome', [
-            'events'=>$events,
-            'resevents'=>$resevents
-
-        ] ); 
-=======
 
     public function welcome ()
     {
-        $clubs = club::get('club_name');
-        $adhrents = adhrent::inRandomOrder()->limit(6)->get();
-        return view('welcome' [
-            'clubs'=> $clubs,
-            'adhrents'=> $adhrents
+        $clubs = Club::get('categorie');
+        $clubs = Club::inRandomOrder()->limit(6)->get();
+        return view('welcome', [
+            'clubs' => $clubs
         ]);
->>>>>>> 3512d717d28247febbf24c8d20f0c205379710e4
+               
     }
 }

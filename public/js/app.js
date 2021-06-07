@@ -37423,8 +37423,8 @@ if (token) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laravel\gestion-cub\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\laravel\gestion-cub\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Marwa Hamza\Desktop\Laravel\club_marwa\gestiondesclubs\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Marwa Hamza\Desktop\Laravel\club_marwa\gestiondesclubs\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -17,8 +17,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin-dashboard', function () {
+Route::get('/admin', function () {
     return view('admin.dashboard');
-})->middleware('auth', 'admin')->name('admin.dashboard');
-
-Route::resource('customers', 'Admin\CustomerController');
+});

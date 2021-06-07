@@ -19,6 +19,7 @@ class CreateClubsTable extends Migration
             $table->integer('nbr_adherant');
             $table->enum('categorie', ['scientifique', 'culturelle', 'artistique']);
             $table->string('chair_name');
+            $table->string('picture');
             $table->timestamps();
             
         });

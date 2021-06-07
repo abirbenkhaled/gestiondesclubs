@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Club;
+use App\Event;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -32,6 +33,16 @@ class HomeController extends Controller
         $clubs = Club::inRandomOrder()->limit(6)->get();
         return view('welcome', [
             'clubs' => $clubs
+        ]);
+               
+    }
+
+    public function event ()
+    {
+        //$events = Event::get('categorie');
+        $events = Event::inRandomOrder()->limit(6)->get();
+        return view('event', [
+            'events' => $events
         ]);
                
     }

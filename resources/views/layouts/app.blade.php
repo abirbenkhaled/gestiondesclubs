@@ -71,12 +71,21 @@
                 </div>
             </div>
         </nav>
+<<<<<<< HEAD
+
+        <main class=" container py-4">
+            @yield('content')
+        </main>
+          <!-- Footer-->
+          <footer class="py-5 bg-dark">
+=======
        <!-- Page Content-->
         <main class="container">
             @yield('content')
         </main>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
+>>>>>>> a03de6b079db31d42fe5a5d21b97125250968ced
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
         </footer>
     </div>

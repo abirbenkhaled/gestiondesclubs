@@ -5,15 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-<<<<<<< HEAD
-use Illuminate\Support\Facades\AuthenticatesUsers;
-=======
-<<<<<<< HEAD
-use Illuminate\Support\Facades\AuthenticatesUsers;
-=======
-use Illuminate\Support\Facades\Auth;
->>>>>>> 3512d717d28247febbf24c8d20f0c205379710e4
->>>>>>> a03de6b079db31d42fe5a5d21b97125250968ced
 
 class LoginController extends Controller
 {
@@ -42,15 +33,7 @@ class LoginController extends Controller
             return '/admin-dashboard';
         }
         return '/home';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-    }
->>>>>>> 3512d717d28247febbf24c8d20f0c205379710e4
->>>>>>> a03de6b079db31d42fe5a5d21b97125250968ced
-    /**
+/**
      * Create a new controller instance.
      *
      * @return void

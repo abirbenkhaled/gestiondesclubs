@@ -27,6 +27,9 @@ Route::get('/admin', function () {
 Route::get('/workshop', function () {
     return view('workshop');
 });
+Route::get('/admin2', function () {
+    return view('admin2.dashboard2');
+});
 
 Route::get('/events','HomeController@index');
 

@@ -13,5 +13,7 @@ $factory->define(Event::class, function (Faker $faker) {
         'date' => $faker->date($format = 'Y-m-d', $max = 'now'),
         'sujet' => now(),
         'club_id'=>Club::get('id')->random(),
+
+        
        ];
       });

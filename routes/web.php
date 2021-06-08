@@ -27,3 +27,7 @@ Route::get('/admin', function () {
 Route::get('/workshop', function () {
     return view('workshop');
 });
+
+Route::get('/events','HomeController@index');
+
+

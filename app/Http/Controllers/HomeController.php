@@ -14,7 +14,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except('welcome');
+      //  $this->middleware('auth')->except('welcome');
+        
     }
 
     /**
@@ -24,7 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $events = Event::get()->all();
+      //  dd($events);
+        return view('event',$events);
     }
 
     public function welcome ()
@@ -39,11 +42,9 @@ class HomeController extends Controller
 
     public function event ()
     {
-        //$events = Event::get('categorie');
+        $events = Event::get('sujet');
         $events = Event::inRandomOrder()->limit(6)->get();
-        return view('event', [
-            'events' => $events
-        ]);
+        return view('event',$events);
                
     }
 }

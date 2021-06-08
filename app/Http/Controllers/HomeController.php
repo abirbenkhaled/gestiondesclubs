@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Club;
+use App\Workshop;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,6 +15,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->except('welcome');
+        
     }
 
     /**
@@ -34,5 +36,15 @@ class HomeController extends Controller
             'clubs' => $clubs
         ]);
                
+    }
+    public function workshop()
+    {
+        $workshops=Workshop::get('formateur_name');
+        $workshops=Workshop::inRandomOrder()->limit(6)->get();
+        return view('workshop',[
+            'workshops' => $workshops
+        ]);
+
+
     }
 }

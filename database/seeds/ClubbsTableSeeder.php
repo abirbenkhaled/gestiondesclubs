@@ -1,8 +1,8 @@
 <?php
-use App\Club;
-use Illuminate\Database\Seeder;
 
-class ClubTableSeeder extends Seeder
+use Illuminate\Database\Seeder;
+use App\Club;
+class ClubbsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

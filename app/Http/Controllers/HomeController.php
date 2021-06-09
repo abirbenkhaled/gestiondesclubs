@@ -27,12 +27,12 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    /*public function index()
     {
         $events = Event::get()->all();
       //  dd($events);
         return view('event',$events);
-    }
+    }*/
 
     public function welcome ()
     {

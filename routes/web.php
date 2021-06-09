@@ -24,7 +24,7 @@ Route::get('/admin-dashboard', function () {
     return view('admin.dashboard');
 })->middleware('auth' , 'admin');
 
-Route::resource('adhrents' , 'Admin\AdhrentController');
+Route::resource('adhrents' , 'Admin\AdhrentController'); 
 
 /* Route::get('/workshop', function () {
     return view('workshop');

@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 @section('main')
+<a href="{{route('adhrents.create')}}" class="btn btn-outline-primary  float-right">Ajouter un nouvel adhérent</a>
 <h3>liste des adhérents</h3>
 <table class="table table-hover">
     <thead>

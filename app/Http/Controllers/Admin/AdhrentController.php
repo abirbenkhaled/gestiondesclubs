@@ -25,7 +25,7 @@ class AdhrentController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.adhrent.create');
     }
 
     /**

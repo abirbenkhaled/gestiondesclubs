@@ -3,7 +3,7 @@
 @section('content')
 
     
-        <h1 class="my-4">Gestion des Clubs</h1>
+        <h1 class="my-4" >Gestion des Clubs</h1>
         
     
     <div class="col-lg-15">

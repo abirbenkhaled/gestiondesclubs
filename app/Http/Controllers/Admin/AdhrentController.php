@@ -15,7 +15,7 @@ class AdhrentController extends Controller
      */
     public function index()
     {
-        return view('admin.adhrent.index' ,['adhrents'=> Adhrent::all()]);
+        return view('admin.adhrent.index' ,['adhrents'=> Adhrent::paginate(10)]);
     }
 
     /**
@@ -47,7 +47,8 @@ class AdhrentController extends Controller
      */
     public function show(Adhrent $adhrent)
     {
-        //
+        //$adhrent = Adhrent::find($id);
+        return view('admin.adhrent.show', ['adhrent'=>$adhrent] );
     }
 
     /**

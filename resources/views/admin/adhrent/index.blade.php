@@ -17,14 +17,16 @@
             <td>{{$adhrent->first_name.' '.$adhrent->last_name}}</td>
             <td>{{$adhrent->adresse_courriel}}</td>
             <td>
-              <a href="" class="btn btn-info">Show</a>
-              <a href="" class="btn btn-warning">Edit</a>
-              <a href="" class="btn btn-danger">Delete</a>
+              <a href="{{route('adhrents.show' , ['adhrent'=>$adhrent->id])}}" class="btn btn-info" title="show details about {{$adhrent->first_name.' '.$adhrent->last_name}}">Show</a>
+              <a href="" class="btn btn-warning" title="edit details about  {{$adhrent->first_name.' '.$adhrent->last_name}}">Edit</a>
+              <a href="" class="btn btn-danger" title="delete  {{$adhrent->first_name.' '.$adhrent->last_name}}">Delete</a>
             </td>            
         </tr>
         @endforeach
       
     </tbody>
+    
 </table>
+{{$adhrents->links()}}
     
 @endsection

@@ -25,7 +25,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.event.create');
     }
 
     /**
@@ -36,7 +36,18 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        var_dump($request);
+        /*
+        $validatedData = $request->validate();
+        'recepteur'=>'required',
+        'destinataire'=>'required',
+        'date'=>'required',
+        'sujet'=>'required',
+        ]);
+        event = Event::create($validatedData);*/
+        $event = Event::create ($validatedData);
+        return redirect()->route('events.event.show',$event);
+        
     }
 
     /**
@@ -45,9 +56,10 @@ class EventController extends Controller
      * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
-    {
-        //
+    public function show($id)
+    {   
+        $event = Event::find($id);
+        return view('admin.event.show',['event'=>$event]);
     }
 
     /**

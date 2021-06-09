@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 @section('main')
-<h1>Liste des evenements</h1>
+<a href="{{route('events.create')}}" class="btn btn-outline-primary btn-lg float-right">Add new event</a>
+<h3>Liste des evenements</h3>
 
 <table class="table table-hover">
     <thead>
@@ -22,15 +23,17 @@
             <td>{{$event->date}}</td>
             <td>{{$event->sujet}}</td>
             <td>
-              <a href="" class="btn btn-info">Show</a>
-              <a href="" class="btn btn-warning">Edit</a>
-              <a href="" class="btn btn-danger">Delete</a>
+              <a href="{{route('events.show' , ['event'=>$event->id])}}" class="btn btn-info" title="show details about{{$event->recepteur}}">Show</a>
+              <a href="" class="btn btn-warning" title="edit event{{$event->recepteur}}">Edit</a>
+              <a href="" class="btn btn-danger" title="delete event">Delete</a>
+
             </td>            
         </tr>
         @endforeach
       
     </tbody>
-    {{$events->links() }}
+    
 </table>
+{{$events->links() }}
     
 @endsection

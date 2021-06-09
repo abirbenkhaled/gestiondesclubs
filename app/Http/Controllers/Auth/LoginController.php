@@ -35,14 +35,10 @@ class LoginController extends Controller
         if (Auth::user()->admin) {
             return '/admin-dashboard';
         }
-<<<<<<< HEAD
         return '/home';
 
     }
     /**
-=======
-
->>>>>>> 94e036e2cf62c5efe5a838b0f9cfcb86ca9489a1
      * Create a new controller instance.
      *
      * @return void

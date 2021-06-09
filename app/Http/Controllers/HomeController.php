@@ -43,8 +43,8 @@ class HomeController extends Controller
         ]);
                
     }
-
-    public function workshop()
+}
+    /*public function workshop()
     {
         $workshops=Workshop::get('formateur_name');
         $workshops=Workshop::inRandomOrder()->limit(6)->get();
@@ -52,15 +52,14 @@ class HomeController extends Controller
             'workshops' => $workshops
         ]);
 
+*/
 
 
-
-    public function event ()
+    /*public function event ()
     {
         $events = Event::get('sujet');
         $events = Event::inRandomOrder()->limit(6)->get();
         return view('event',$events);
                
 
-    }
-}
+    }*/

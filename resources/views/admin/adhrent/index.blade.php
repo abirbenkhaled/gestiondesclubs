@@ -7,6 +7,7 @@
         <th scope="col">#</th>
         <th scope="col"> Nom & Prénom</th>
         <th scope="col">Email</th>
+        <th scope="col">Opérations</th>
       </tr>
     </thead>
     <tbody>
@@ -15,7 +16,11 @@
             <th scope="row">{{$key}}</th>
             <td>{{$adhrent->first_name.' '.$adhrent->last_name}}</td>
             <td>{{$adhrent->adresse_courriel}}</td>
-            
+            <td>
+              <a href="" class="btn btn-info">Show</a>
+              <a href="" class="btn btn-warning">Edit</a>
+              <a href="" class="btn btn-danger">Delete</a>
+            </td>            
         </tr>
         @endforeach
       

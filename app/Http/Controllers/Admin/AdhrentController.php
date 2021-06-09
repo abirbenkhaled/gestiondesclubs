@@ -15,7 +15,7 @@ class AdhrentController extends Controller
      */
     public function index()
     {
-        return view('admin.adhrent.index' ['adhrents', Adhrent::all()]);
+        return view('admin.adhrent.index' ,['adhrents'=> Adhrent::all()]);
     }
 
     /**

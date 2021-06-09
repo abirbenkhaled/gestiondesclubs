@@ -25,9 +25,3 @@ const mix = require('laravel-mix');
  ], 'public/js/admin.js');
  
 
-     /*)
- ], 'public/css/admin.css')
- .scripts([
-     'resources/js/dashboard.js'
- ], 'public/js/admin.js');*/])
-

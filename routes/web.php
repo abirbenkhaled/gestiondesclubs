@@ -26,6 +26,7 @@ Route::get('/admin-dashboard', function () {
 
 Route::resource('adhrents' , 'Admin\AdhrentController'); 
 
+Route::resource('events' , 'Admin\EventController'); 
 /* Route::get('/workshop', function () {
     return view('workshop');
 });
@@ -33,6 +34,4 @@ Route::resource('adhrents' , 'Admin\AdhrentController');
 Route::get('/events','HomeController@index');
 */
 
-Route::get('/admin1', function () {
-    return view('admin1.dashboard1');
-});
+

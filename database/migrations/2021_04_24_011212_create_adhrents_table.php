@@ -18,7 +18,7 @@ class CreateAdhrentsTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('adresse_courriel');
-            $table->double('n°_cin');
+            $table->integer('n°_cin');
             $table->integer('club_id')->unsigned();
             $table->timestamps();
             $table->foreign('club_id')->references('id')->on('clubs')->onDelete('restrict')->onUpdate('restrict');

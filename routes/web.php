@@ -20,16 +20,18 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-Route::get('/admin', function () {
+Route::get('/admin-dashboard', function () {
     return view('admin.dashboard');
 })->middleware('auth' , 'admin');
 
-Route::get('/workshop', function () {
+Route::resource('adhrents' , 'Admin\AdhrentController'); 
+
+/* Route::get('/workshop', function () {
     return view('workshop');
 });
 
 Route::get('/events','HomeController@index');
-
+*/
 
 Route::get('/admin1', function () {
     return view('admin1.dashboard1');

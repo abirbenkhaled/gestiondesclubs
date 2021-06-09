@@ -20,10 +20,7 @@ class CheckIfAdmin
         return redirect('home');
     }
 
-    {
-        if (!Auth::user()->admin) {
-        return redirect('home');
-        }
+ 
 
         return $next($request);
     }

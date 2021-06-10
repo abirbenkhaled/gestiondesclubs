@@ -10,8 +10,12 @@
       <li class="list-group-item">numero de cin:<strong> {{$adhrent->n°_cin}}</strong></li>
       <li class="list-group-item">
         <a href="{{route('adhrents.edit' , ['adhrent'=>$adhrent->id])}}" class="btn btn-warning" title="edit details about  {{$adhrent->first_name.' '.$adhrent->last_name}}">Edit</a>
-        <a href="" class="btn btn-danger" title="delete  {{$adhrent->first_name.' '.$adhrent->last_name}}">Delete</a>
-      </li>   
+        <a class="btn btn-danger " href="{{route('adhrents.destroy' , ['adhrent'=>$adhrent->id])}}" onclick="event.preventDefault();
+          document.getElementById('delete-form').submit();"><i class="fa fa-window-close"></i> Delete </a>
+          <form id="delete-form"  action="{{route('adhrents.destroy' , ['adhrent'=>$adhrent->id])}}" method="POST">
+      @csrf
+      @method('DELETE')
+      </form>      </li>   
     </ul>
    
   </div>

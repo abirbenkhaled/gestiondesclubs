@@ -39,7 +39,7 @@
                             <p class="card-text">{{$club->chair_name }}</p>
                         </div>
                         <div class="card-footer"><small class="text-muted">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Joindre</a></div>
+                            
                             
                         </small></div>
                     </div>

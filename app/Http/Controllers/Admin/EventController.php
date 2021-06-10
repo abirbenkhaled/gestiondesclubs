@@ -36,17 +36,17 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        var_dump($request);
-        /*
-        $validatedData = $request->validate();
+       // var_dump($request);
+        
+        $validatedData = $request->validate([
         'recepteur'=>'required',
         'destinataire'=>'required',
         'date'=>'required',
         'sujet'=>'required',
         ]);
-        event = Event::create($validatedData);*/
+       $validatedData['club_id']=1;     
         $event = Event::create ($validatedData);
-        return redirect()->route('events.event.show',$event);
+        return redirect()->route('events.show',$event);
         
     }
 
@@ -70,7 +70,8 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+
+        return view('admin.event.edit',['event'=>$event]);
     }
 
     /**
@@ -82,7 +83,16 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
-        //
+      //  dd($request);
+        $validatedData = $request->validate([
+            'recepteur'=>'required',
+            'destinataire'=>'required',
+            'date'=>'required',
+            'sujet'=>'required',
+            ]);
+       $event->update($validatedData);   
+    
+       return redirect()->route('events.show',$event);
     }
 
     /**
@@ -93,6 +103,7 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        //
+        $event->delete();
+        return redirect()->back();
     }
 }

@@ -23,9 +23,15 @@
             <td>{{$event->date}}</td>
             <td>{{$event->sujet}}</td>
             <td>
+          
               <a href="{{route('events.show' , ['event'=>$event->id])}}" class="btn btn-info" title="show details about{{$event->recepteur}}">Show</a>
-              <a href="" class="btn btn-warning" title="edit event{{$event->recepteur}}">Edit</a>
-              <a href="" class="btn btn-danger" title="delete event">Delete</a>
+              <a href="{{route('events.edit' , ['event' =>$event->id])}}" class="btn btn-warning" title="edit event{{$event->recepteur}}">Edit</a>
+              <a class="btn btn-outline-danger " href="{{route('events.destroy' , ['event' =>$event->id])}}"
+               onclick="event.preventDefault();document.getElementById('delete-form').submit();"><i class="fa fa-window-close"></i> Delete </a>
+                            <form id="delete-form"  action="{{route('events.destroy' , ['event' =>$event->id])}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        </form>
 
             </td>            
         </tr>

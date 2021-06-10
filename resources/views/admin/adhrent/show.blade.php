@@ -9,7 +9,7 @@
       <li class="list-group-item">Email:<strong> {{$adhrent->adresse_courriel}}</strong></li>
       <li class="list-group-item">numero de cin:<strong> {{$adhrent->n°_cin}}</strong></li>
       <li class="list-group-item">
-        <a href="" class="btn btn-warning" title="edit details about  {{$adhrent->first_name.' '.$adhrent->last_name}}">Edit</a>
+        <a href="{{route('adhrents.edit' , ['adhrent'=>$adhrent->id])}}" class="btn btn-warning" title="edit details about  {{$adhrent->first_name.' '.$adhrent->last_name}}">Edit</a>
         <a href="" class="btn btn-danger" title="delete  {{$adhrent->first_name.' '.$adhrent->last_name}}">Delete</a>
       </li>   
     </ul>

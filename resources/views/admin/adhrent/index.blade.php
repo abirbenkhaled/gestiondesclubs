@@ -19,8 +19,10 @@
             <td>{{$adhrent->adresse_courriel}}</td>
             <td>
               <a href="{{route('adhrents.show' , ['adhrent'=>$adhrent->id])}}" class="btn btn-info" title="show details about {{$adhrent->first_name.' '.$adhrent->last_name}}">Show</a>
-              <a href="" class="btn btn-warning" title="edit details about  {{$adhrent->first_name.' '.$adhrent->last_name}}">Edit</a>
-              <a href="" class="btn btn-danger" title="delete  {{$adhrent->first_name.' '.$adhrent->last_name}}">Delete</a>
+              <a href="{{route('adhrents.edit' , ['adhrent'=>$adhrent->id])}}" class="btn btn-warning" title="edit details about  {{$adhrent->first_name.' '.$adhrent->last_name}}">Edit</a>
+              <a href="" class="btn btn-danger" title="delete  {{$adhrent->first_name.' '.$adhrent->last_name}}"
+                onclick="event.preventDefault(); document.querySelector('#delete-adhrent-form').submit()">Delete</a>
+              <form action="{{route('adhrents.destroy' , ['adhrent'=>$adhrent->id])}}" method="post" id="delete-adhrent-form">@csrf @method('DELETE')</form>
             </td>            
         </tr>
         @endforeach

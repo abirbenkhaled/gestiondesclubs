@@ -36,7 +36,12 @@ class AdhrentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        $validateData = $request->validate($this->validationRules()) ;
+         
+         $adhrent = Adhrent::create($validateData);
+         return redirect()->route('adhrents.show', $adhrent);
+
     }
 
     /**
@@ -59,7 +64,7 @@ class AdhrentController extends Controller
      */
     public function edit(Adhrent $adhrent)
     {
-        //
+        return view('admin.adhrent.edit', ['adhrent'=>$adhrent] ); 
     }
 
     /**
@@ -71,7 +76,9 @@ class AdhrentController extends Controller
      */
     public function update(Request $request, Adhrent $adhrent)
     {
-        //
+        $validateData = $request->validate($this->validationRules()) ;
+        $adhrent->update($validateData);
+        return view('admin.adhrent.show', ['adhrent'=>$adhrent] );
     }
 
     /**
@@ -82,6 +89,18 @@ class AdhrentController extends Controller
      */
     public function destroy(Adhrent $adhrent)
     {
-        //
+        $adhrent->delete();
+        return redirect()->route('adhrents.index');
+    }
+
+    private function validationRules()
+    {
+        return [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'n°_cin' => 'required',
+            'adresse_courriel' => 'required',
+            'club_id' => 'required',
+        ];
     }
 }

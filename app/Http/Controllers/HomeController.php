@@ -27,12 +27,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    /*public function index()
-    {
-        $events = Event::get()->all();
-      //  dd($events);
-        return view('event',$events);
-    }*/
+ 
 
     public function welcome ()
     {
@@ -44,22 +39,5 @@ class HomeController extends Controller
                
     }
 }
-    /*public function workshop()
-    {
-        $workshops=Workshop::get('formateur_name');
-        $workshops=Workshop::inRandomOrder()->limit(6)->get();
-        return view('workshop',[
-            'workshops' => $workshops
-        ]);
+  
 
-*/
-
-
-    /*public function event ()
-    {
-        $events = Event::get('sujet');
-        $events = Event::inRandomOrder()->limit(6)->get();
-        return view('event',$events);
-               
-
-    }*/

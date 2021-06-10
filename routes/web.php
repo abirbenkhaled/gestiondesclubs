@@ -26,10 +26,12 @@ Route::get('/admin-dashboard', function () {
 
 Route::resource('adhrents' , 'Admin\AdhrentController'); 
 
+Route::resource('events' , 'Admin\EventController'); 
 /* Route::get('/workshop', function () {
     return view('workshop');
 });
 
 Route::get('/events','HomeController@index');
 */
+
 

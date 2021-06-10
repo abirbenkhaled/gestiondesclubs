@@ -23,8 +23,11 @@
     <div id="app">
         {{------------------------ Navigation ------------------------}}
         @include('layouts.navbar')
+        
+
         {{------------------------ Page Content-------------------------}}
         <main class="container py-4">
+
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -76,6 +79,9 @@
             </div>
         </nav>
 <!-- Page Content-->
+
+    
+
         <main class=" container py-4">
             @yield('content')
         </main>
